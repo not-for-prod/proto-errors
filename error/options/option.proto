@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package error.options;
+
+import "google/protobuf/descriptor.proto";
+import "google/rpc/code.proto";
+
+option go_package = "github.com/not-for-prod/proto-errors/error/options";
+
+message ErrorMessageOptions {
+  google.rpc.Code code = 1;
+  string message_template = 2;
+}
+
+extend google.protobuf.MessageOptions {
+  ErrorMessageOptions error_details = 1043;
+}
