@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.36.10
 // 	protoc        (unknown)
-// source: error/options/option.proto
+// source: error/erroptions/option.proto
 
-package options
+package erroptions
 
 import (
 	code "google.golang.org/genproto/googleapis/rpc/code"
@@ -33,7 +33,7 @@ type ErrorMessageOptions struct {
 
 func (x *ErrorMessageOptions) Reset() {
 	*x = ErrorMessageOptions{}
-	mi := &file_error_options_option_proto_msgTypes[0]
+	mi := &file_error_erroptions_option_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -45,7 +45,7 @@ func (x *ErrorMessageOptions) String() string {
 func (*ErrorMessageOptions) ProtoMessage() {}
 
 func (x *ErrorMessageOptions) ProtoReflect() protoreflect.Message {
-	mi := &file_error_options_option_proto_msgTypes[0]
+	mi := &file_error_erroptions_option_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -58,7 +58,7 @@ func (x *ErrorMessageOptions) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ErrorMessageOptions.ProtoReflect.Descriptor instead.
 func (*ErrorMessageOptions) Descriptor() ([]byte, []int) {
-	return file_error_options_option_proto_rawDescGZIP(), []int{0}
+	return file_error_erroptions_option_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ErrorMessageOptions) GetCode() code.Code {
@@ -75,56 +75,56 @@ func (x *ErrorMessageOptions) GetMessageTemplate() string {
 	return ""
 }
 
-var file_error_options_option_proto_extTypes = []protoimpl.ExtensionInfo{
+var file_error_erroptions_option_proto_extTypes = []protoimpl.ExtensionInfo{
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*ErrorMessageOptions)(nil),
 		Field:         1043,
-		Name:          "error.options.error_details",
+		Name:          "error.erroptions.error_details",
 		Tag:           "bytes,1043,opt,name=error_details",
-		Filename:      "error/options/option.proto",
+		Filename:      "error/erroptions/option.proto",
 	},
 }
 
 // Extension fields to descriptorpb.MessageOptions.
 var (
-	// optional error.options.ErrorMessageOptions error_details = 1043;
-	E_ErrorDetails = &file_error_options_option_proto_extTypes[0]
+	// optional error.erroptions.ErrorMessageOptions error_details = 1043;
+	E_ErrorDetails = &file_error_erroptions_option_proto_extTypes[0]
 )
 
-var File_error_options_option_proto protoreflect.FileDescriptor
+var File_error_erroptions_option_proto protoreflect.FileDescriptor
 
-const file_error_options_option_proto_rawDesc = "" +
+const file_error_erroptions_option_proto_rawDesc = "" +
 	"\n" +
-	"\x1aerror/options/option.proto\x12\rerror.options\x1a google/protobuf/descriptor.proto\x1a\x15google/rpc/code.proto\"f\n" +
+	"\x1derror/erroptions/option.proto\x12\x10error.erroptions\x1a google/protobuf/descriptor.proto\x1a\x15google/rpc/code.proto\"f\n" +
 	"\x13ErrorMessageOptions\x12$\n" +
 	"\x04code\x18\x01 \x01(\x0e2\x10.google.rpc.CodeR\x04code\x12)\n" +
-	"\x10message_template\x18\x02 \x01(\tR\x0fmessageTemplate:i\n" +
-	"\rerror_details\x12\x1f.google.protobuf.MessageOptions\x18\x93\b \x01(\v2\".error.options.ErrorMessageOptionsR\ferrorDetailsB\xa2\x01\n" +
-	"\x11com.error.optionsB\vOptionProtoP\x01Z)payin/internal/generated/pb/error/options\xa2\x02\x03EOX\xaa\x02\rError.Options\xca\x02\x0eError_\\Options\xe2\x02\x1aError_\\Options\\GPBMetadata\xea\x02\x0eError::Optionsb\x06proto3"
+	"\x10message_template\x18\x02 \x01(\tR\x0fmessageTemplate:l\n" +
+	"\rerror_details\x12\x1f.google.protobuf.MessageOptions\x18\x93\b \x01(\v2%.error.erroptions.ErrorMessageOptionsR\ferrorDetailsB\xb4\x01\n" +
+	"\x14com.error.erroptionsB\vOptionProtoP\x01Z,payin/internal/generated/pb/error/erroptions\xa2\x02\x03EEX\xaa\x02\x10Error.Erroptions\xca\x02\x11Error_\\Erroptions\xe2\x02\x1dError_\\Erroptions\\GPBMetadata\xea\x02\x11Error::Erroptionsb\x06proto3"
 
 var (
-	file_error_options_option_proto_rawDescOnce sync.Once
-	file_error_options_option_proto_rawDescData []byte
+	file_error_erroptions_option_proto_rawDescOnce sync.Once
+	file_error_erroptions_option_proto_rawDescData []byte
 )
 
-func file_error_options_option_proto_rawDescGZIP() []byte {
-	file_error_options_option_proto_rawDescOnce.Do(func() {
-		file_error_options_option_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_error_options_option_proto_rawDesc), len(file_error_options_option_proto_rawDesc)))
+func file_error_erroptions_option_proto_rawDescGZIP() []byte {
+	file_error_erroptions_option_proto_rawDescOnce.Do(func() {
+		file_error_erroptions_option_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_error_erroptions_option_proto_rawDesc), len(file_error_erroptions_option_proto_rawDesc)))
 	})
-	return file_error_options_option_proto_rawDescData
+	return file_error_erroptions_option_proto_rawDescData
 }
 
-var file_error_options_option_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_error_options_option_proto_goTypes = []any{
-	(*ErrorMessageOptions)(nil),         // 0: error.options.ErrorMessageOptions
+var file_error_erroptions_option_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_error_erroptions_option_proto_goTypes = []any{
+	(*ErrorMessageOptions)(nil),         // 0: error.erroptions.ErrorMessageOptions
 	(code.Code)(0),                      // 1: google.rpc.Code
 	(*descriptorpb.MessageOptions)(nil), // 2: google.protobuf.MessageOptions
 }
-var file_error_options_option_proto_depIdxs = []int32{
-	1, // 0: error.options.ErrorMessageOptions.code:type_name -> google.rpc.Code
-	2, // 1: error.options.error_details:extendee -> google.protobuf.MessageOptions
-	0, // 2: error.options.error_details:type_name -> error.options.ErrorMessageOptions
+var file_error_erroptions_option_proto_depIdxs = []int32{
+	1, // 0: error.erroptions.ErrorMessageOptions.code:type_name -> google.rpc.Code
+	2, // 1: error.erroptions.error_details:extendee -> google.protobuf.MessageOptions
+	0, // 2: error.erroptions.error_details:type_name -> error.erroptions.ErrorMessageOptions
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	2, // [2:3] is the sub-list for extension type_name
@@ -132,27 +132,27 @@ var file_error_options_option_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_error_options_option_proto_init() }
-func file_error_options_option_proto_init() {
-	if File_error_options_option_proto != nil {
+func init() { file_error_erroptions_option_proto_init() }
+func file_error_erroptions_option_proto_init() {
+	if File_error_erroptions_option_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_error_options_option_proto_rawDesc), len(file_error_options_option_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_error_erroptions_option_proto_rawDesc), len(file_error_erroptions_option_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 1,
 			NumServices:   0,
 		},
-		GoTypes:           file_error_options_option_proto_goTypes,
-		DependencyIndexes: file_error_options_option_proto_depIdxs,
-		MessageInfos:      file_error_options_option_proto_msgTypes,
-		ExtensionInfos:    file_error_options_option_proto_extTypes,
+		GoTypes:           file_error_erroptions_option_proto_goTypes,
+		DependencyIndexes: file_error_erroptions_option_proto_depIdxs,
+		MessageInfos:      file_error_erroptions_option_proto_msgTypes,
+		ExtensionInfos:    file_error_erroptions_option_proto_extTypes,
 	}.Build()
-	File_error_options_option_proto = out.File
-	file_error_options_option_proto_goTypes = nil
-	file_error_options_option_proto_depIdxs = nil
+	File_error_erroptions_option_proto = out.File
+	file_error_erroptions_option_proto_goTypes = nil
+	file_error_erroptions_option_proto_depIdxs = nil
 }

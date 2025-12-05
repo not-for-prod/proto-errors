@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package error.options;
+package error.erroptions;
 
 import "google/protobuf/descriptor.proto";
 import "google/rpc/code.proto";
 
-option go_package = "github.com/not-for-prod/proto-errors/error/options;erroptions";
+option go_package = "github.com/not-for-prod/proto-errors/error/erroptions";
 
 message ErrorMessageOptions {
   google.rpc.Code code = 1;
